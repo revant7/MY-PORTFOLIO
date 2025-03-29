@@ -16,7 +16,7 @@ const Navbar = () => {
         <ul className="flex space-x-6">
           {navItems.map((item) => (
             <li key={item}>
-              <Link to={`/${item.toLowerCase()}`} className="hover:text-primary">
+              <Link to={`/${item == "Home" ? "" : item.toLowerCase()}`} className="hover:text-primary">
                 {item}
               </Link>
             </li>

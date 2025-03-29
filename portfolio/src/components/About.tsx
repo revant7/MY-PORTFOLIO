@@ -6,7 +6,7 @@ const About = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
-      className="min-h-screen flex flex-col justify-center items-center text-white bg-gray-900"
+      className="min-h-screen flex flex-col justify-center items-center text-white"
     >
       <h1 className="text-4xl font-bold">About Me</h1>
       <p className="mt-4 max-w-2xl text-center">
