@@ -1,8 +1,7 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
-const Navbar = () => {
-  const navItems = ['Home', 'About', 'Projects', 'Contact'];
+const Navbar = ({ onHomeClick, onAboutClick, onSkillsClick, onProjectClick, onExperienceClick, onContactClick }) => {
 
   return (
     <motion.nav
@@ -14,13 +13,25 @@ const Navbar = () => {
       <div className="max-w-6xl mx-auto flex justify-between items-center">
         <h1 className="text-2xl font-bold">MyPortfolio</h1>
         <ul className="flex space-x-6">
-          {navItems.map((item) => (
-            <li key={item}>
-              <Link to={`/${item == "Home" ? "" : item.toLowerCase()}`} className="hover:text-primary">
-                {item}
-              </Link>
-            </li>
-          ))}
+          <li className="hover:text-primary" onClick={onHomeClick}>
+            Home
+          </li>
+          <li className="hover:text-primary" onClick={onAboutClick}>
+            About
+          </li>
+          <li className="hover:text-primary" onClick={onSkillsClick}>
+            Skills
+          </li>
+          <li className="hover:text-primary" onClick={onProjectClick}>
+            Projects
+          </li>
+          <li className="hover:text-primary" onClick={onExperienceClick}>
+            Experience
+          </li>
+          <li className="hover:text-primary" onClick={onContactClick}>
+            Contact
+          </li>
+
         </ul>
       </div>
     </motion.nav>
