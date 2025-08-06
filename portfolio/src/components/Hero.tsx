@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 
 function Hero() {
   const [init, setInit] = useState(false);
@@ -48,11 +48,7 @@ function Hero() {
         width: 1,
       },
       move: {
-        direction: "none",
         enable: true,
-        outModes: {
-          default: "out",
-        },
         speed: 2,
         random: false,
       },

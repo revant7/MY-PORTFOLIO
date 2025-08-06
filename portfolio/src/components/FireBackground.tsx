@@ -3,18 +3,17 @@ import Particles, { initParticlesEngine } from "@tsparticles/react";
 import {
   type Container,
   type ISourceOptions,
-  MoveDirection,
-  OutMode,
 } from "@tsparticles/engine";
 // import { loadAll } from "@/tsparticles/all"; // if you are going to use `loadAll`, install the "@tsparticles/all" package too.
 // import { loadFull } from "tsparticles"; // if you are going to use `loadFull`, install the "tsparticles" package too.
 import { loadSlim } from "@tsparticles/slim"; // if you are going to use `loadSlim`, install the "@tsparticles/slim" package too.
 // import { loadBasic } from "@tsparticles/basic"; // if you are going to use `loadBasic`, install the "@tsparticles/basic" package too.
 
-import React from 'react';
+// import React from 'react';
 
 const FireBackground = () => {
-    const [init, setInit] = useState(false);
+  const [init, setInit] = useState(false);
+  console.log(init);
   // this should be run only once per application lifetime
   useEffect(() => {
     initParticlesEngine(async (engine) => {
@@ -34,7 +33,7 @@ const FireBackground = () => {
     console.log(container);
   };
 
-  
+
 
   const options: ISourceOptions = useMemo(
     () => ({
@@ -114,16 +113,16 @@ const FireBackground = () => {
     }),
     []
   );
-    return (
-        <div>
-        <Particles
+  return (
+    <div>
+      <Particles
         id="tsparticles"
         particlesLoaded={particlesLoaded}
         options={options}
-        />
-            
-        </div>
-    );
+      />
+
+    </div>
+  );
 }
 
 export default FireBackground;

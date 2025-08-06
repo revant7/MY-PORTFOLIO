@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
-import { forwardRef } from "react";
+import { forwardRef, Ref } from "react";
 
-const Projects = forwardRef((propes, ref) => {
+const Projects = forwardRef((props, ref: Ref<HTMLElement>) => {
 
   const projects = [
     { id: 1, title: "Trezora - An E-Commerce Platform", description: "Description for project one" },
@@ -17,6 +17,7 @@ const Projects = forwardRef((propes, ref) => {
     { id: 2, title: "Edusphere", description: "Description for project two" },
     { id: 2, title: "Bank Management System", description: "Description for project two" },
   ];
+  console.log(props);
 
   return (
     <section ref={ref}>

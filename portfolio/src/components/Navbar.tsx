@@ -1,7 +1,14 @@
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-
-const Navbar = ({ onHomeClick, onAboutClick, onSkillsClick, onProjectClick, onExperienceClick, onContactClick }) => {
+// import { Link } from 'react-router-dom';
+interface NavbarProps {
+  onHomeClick?: () => void;
+  onAboutClick?: () => void;
+  onSkillsClick?: () => void;
+  onProjectClick: () => void;
+  onExperienceClick?: () => void;
+  onContactClick?: () => void;
+}
+const Navbar = ({ onHomeClick, onAboutClick, onSkillsClick, onProjectClick, onExperienceClick, onContactClick }: NavbarProps) => {
 
   return (
     <motion.nav
